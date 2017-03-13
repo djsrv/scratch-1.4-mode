@@ -35,7 +35,7 @@ React.createElement('div', {id: 'searchbar', className: 'header-bar'},
             'aria-label': formatMessage({ id: 'general.search' }),
             name: 'q' }),
         React.createElement(Button, { type: 'submit',
-          className: 'btn-search' },
-          formatMessage({ id: 'general.search' }))
+            className: 'btn-search' },
+            formatMessage({ id: 'general.search' }))
     )
 )

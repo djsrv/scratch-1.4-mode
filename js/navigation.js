@@ -84,8 +84,10 @@ React.createElement(
         { className: 'link right language' },
         React.createElement('div', { className: 'language-chooser-label' }, 'Language'),
         window.hasOwnProperty('languageChooserId') ?
-            React.createElement(__webpack_require__(window.languageChooserId), { locale: this.props.intl.locale }) :
-            []
+            React.createElement(
+                __webpack_require__(window.languageChooserId),
+                { locale: this.props.intl.locale }
+            ) : []
     )
 ),
 React.createElement('div', {id: 'userbar', className: 'header-bar'},
