@@ -1,0 +1,70 @@
+.page[data-reactroot] {
+    .outer {
+        width: 942px;
+        margin: 0 auto;
+        padding: 0 20px;
+        @include box;
+
+        .title-banner.masthead {
+            background: none;
+
+            h1 {
+                color: $color_text;
+                font-size: 20px;
+                text-align: left;
+            }
+        }
+
+        .tab-background {
+            box-shadow: none;
+            background: none;
+        }
+
+        .tabs {
+            background: none;
+            color: $color_text;
+            justify-content: left;
+
+            li {
+                &:hover {
+                    background: none;
+                }
+            }
+        }
+
+        .categories {
+            a {
+                height: 21px;
+                margin-right: 10px;
+            }
+
+            li {
+                @include button;
+
+                background-color: $color_bg_button !important;
+
+                &.active {
+                    color: $color_nav_active;
+                }
+
+                &:active {
+                    padding: 0 8px;
+                }
+            }
+        }
+
+        .sort-controls {
+            width: 100%;
+
+            form {
+                label {
+                    display: none;
+                }
+            }
+        }
+
+        #projectBox {
+            background: none;
+        }
+    }
+}

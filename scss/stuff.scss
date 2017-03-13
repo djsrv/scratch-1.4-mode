@@ -1,0 +1,29 @@
+$color_text: #333333;
+$color_link: #2a54aa;
+$color_nav_label: #e7ebf7;
+$color_nav_active: #ffc56c;
+$color_bg_button: #4070cf;
+
+@mixin button {
+    height: 21px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0 8px;
+    background-color: $color_bg_button;
+    background-image: url(data-uri('img/bg_button.png'));
+    background-repeat: repeat-x;
+    border: 1px solid #22468c;
+    border-radius: 0;
+    font-size: 14px;
+    font-weight: 700;
+    box-shadow: none !important;
+}
+
+@mixin box {
+    background-image: linear-gradient(180deg, #efefef, white 106px);
+    border-color: #d6d6d6;
+    border-width: 1px 1px 0;
+    border-radius: 10px 10px 0 0;
+    border-style: solid;
+    box-sizing: border-box;
+}

@@ -1,0 +1,12 @@
+{
+  "name": "scratch-1.4-mode",
+  "version": "1.0.0",
+  "description": "",
+  "main": "compile.js",
+  "author": "djsrv",
+  "license": "MIT",
+  "dependencies": {
+    "node-sass": "^4.5.0",
+    "uglify-js": "^2.8.12"
+  }
+}

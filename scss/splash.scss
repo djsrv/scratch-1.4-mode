@@ -1,0 +1,131 @@
+.page[data-reactroot] {
+    .box {
+        width: 100%;
+    }
+
+    .splash {
+        width: 942px;
+        margin: 0 auto;
+    }
+
+    .splash .inner {
+        width: 586px;
+        margin-left: 0;
+        margin-top: 0;
+
+        .box {
+            border-width: 2px 1px 0;
+
+            .box-header h4 {
+                font-size: 18px;
+            }
+
+            .box-content {
+                padding: 0 20px 8px;
+            }
+        }
+    }
+
+    .thumbnail {
+        border: 1px solid #bcbcbc;
+        border-radius: 0 0 5px 5px;
+        padding: 0 !important;
+        margin-right: 22px;
+        box-sizing: border-box;
+
+        .thumbnail-image img {
+            border: none;
+            border-bottom: 1px solid #bcbcbc;
+        }
+
+        &.project {
+            width: 150px;
+            background-image: linear-gradient(180deg, #ededed, #ededed 111px, white);
+
+            .thumbnail-image img {
+                width: 148px;
+                height: 111px;
+            }
+        }
+
+        &.gallery {
+            background-image: linear-gradient(180deg, #ededed, #ededed 99px, white);
+
+            .thumbnail-image img {
+                width: 168px;
+                height: 99px;
+            }
+        }
+
+        > div {
+            display: block;
+            margin: 0 6px;
+            overflow: hidden;
+        }
+
+        > div:last-child {
+            margin-bottom: 2px;
+        }
+
+        .thumbnail-title {
+            font-weight: 400;
+
+            a {
+                font-size: 12px;
+                font-weight: bold;
+            }
+        }
+
+        .thumbnail-creator {
+            font-size: 11px;
+
+            &::before {
+                content: 'by ';
+            }
+        }
+
+        .thumbnail-creator, .thumbnail-favorites, .thumbnail-loves, .thumbnail-remixes, .thumbnail-views {
+            color: $color_text;
+        }
+    }
+
+    .right-column {
+        float: right;
+        width: 346px;
+
+        .box {
+            background-image: linear-gradient(180deg, #d5dff4, white 106px);
+            border-color: #99b2e5;
+            border-width: 1px 1px 0;
+
+            .box-header h4 {
+                font-weight: bold;
+            }
+        }
+    }
+
+    .activity li {
+        > a {
+            text-decoration: none;
+        }
+
+        p a:hover {
+            text-decoration: underline;
+        }
+
+        .stamp {
+            color: $color_text;
+        }
+    }
+
+    .news li {
+        h4 {
+            text-decoration: underline;
+            color: $color_link;
+        }
+
+        p {
+            color: $color_text;
+        }
+    }
+}

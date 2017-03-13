@@ -1,0 +1,54 @@
+@import 'stuff';
+
+@-moz-document url-prefix("https://scratch.mit.edu/") {
+    html, body {
+        background-color: white;
+    }
+
+    body {
+        font-family: "Trebuchet MS", "Luxi Sans", Verdana, Arial, Helvetica, sans-serif;
+        font-size: 13px;
+    }
+
+    body, h1, h2, h3, h4, h5, p {
+        color: $color_text;
+    }
+
+    a:link, a:active, a:visited {
+        text-decoration: underline;
+        color: $color_link;
+    }
+
+    @import 'react';
+}
+
+@-moz-document url("https://scratch.mit.edu/") {
+    .link.home a {
+        color: $color_nav_active !important;
+    }
+
+    @import 'splash';
+}
+
+@-moz-document url-prefix("https://scratch.mit.edu/explore") {
+    @import 'explore';
+}
+
+@-moz-document url-prefix("https://scratch.mit.edu/explore/projects") {
+    .link.projects a {
+        color: $color_nav_active !important;
+    }
+}
+
+@-moz-document url-prefix("https://scratch.mit.edu/explore/studios") {
+    .link.studios a {
+        color: $color_nav_active !important;
+    }
+}
+
+
+@-moz-document url("https://scratch.mit.edu/about") {
+    .link.about a {
+        color: $color_nav_active !important;
+    }
+}
