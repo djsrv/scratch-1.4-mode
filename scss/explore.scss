@@ -12,6 +12,7 @@
                 color: $color_text;
                 font-size: 20px;
                 text-align: left;
+                margin-top: 10px;
             }
         }
 
@@ -21,26 +22,19 @@
         }
 
         .tabs {
-            background: none;
-            color: $color_text;
-            justify-content: left;
-
-            li {
-                &:hover {
-                    background: none;
-                }
-            }
+            display: none;
         }
 
         .categories {
             a {
                 height: 21px;
-                margin-right: 10px;
+                margin-right: 5px;
             }
 
             li {
                 @include button;
 
+                text-transform: lowercase;
                 background-color: $color_bg_button !important;
 
                 &.active {
@@ -55,6 +49,8 @@
 
         .sort-controls {
             width: 100%;
+            padding-top: 0;
+            border-bottom: none;
 
             form {
                 label {
@@ -65,6 +61,62 @@
 
         #projectBox {
             background: none;
+            padding-top: 0;
+        }
+
+        .explore-list-item {
+            margin: 10px 0;
+            padding: 10px;
+            border-bottom: 1px solid #e6e6e6;
+            border-top: 1px solid #e6e6e6;
+            background-color: #fcfcfc;
+            display: flex;
+            flex-direction: row;
+
+            .left {
+                margin-right: 10px;
+            }
+
+            .right {
+                flex: 1;
+                min-width: 0;
+            }
+
+            .thumbnail {
+                display: block;
+                width: 150px;
+                height: 113px;
+
+                img {
+                    border: 1px solid #666;
+                }
+            }
+
+            h3 {
+                font-size: 18px;
+                line-height: normal;
+                margin: 5px 0;
+            }
+
+            p {
+                font-size: 13px;
+                line-height: normal;
+                margin: 0;
+                padding: 0;
+            }
+
+            strong {
+                font-weight: 700;
+            }
+
+            .description {
+                max-height: 4.8em;
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-line-clamp: 4;
+                -webkit-box-orient: vertical;
+                text-overflow: ellipsis;
+            }
         }
     }
 }

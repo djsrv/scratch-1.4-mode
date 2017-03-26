@@ -3,6 +3,7 @@ $color_link: #2a54aa;
 $color_nav_label: #e7ebf7;
 $color_nav_active: #ffc56c;
 $color_bg_button: #4070cf;
+$color_thumb_border: #bcbcbc;
 
 @mixin button {
     height: 21px;
@@ -26,4 +27,8 @@ $color_bg_button: #4070cf;
     border-radius: 10px 10px 0 0;
     border-style: solid;
     box-sizing: border-box;
+}
+
+@mixin thumbnail-background($height) {
+    background-image: linear-gradient(180deg, #ededed, #ededed $height, white)
 }

@@ -23,8 +23,8 @@ window.eval = function (script) {
             pattern: '//# sourceURL=webpack:///./~/react-intl/lib/index.js?',
             handler: function (script) {
                 script = script.replace(
-                        'return message || defaultMessage || id;',
-                        'return (locale === "en" ? window.scratch14Messages[id] : null) || message || window.scratch14Messages[id] || defaultMessage || id;'
+                    'return message || defaultMessage || id;',
+                    'return (locale === "en" ? window.scratch14Messages[id] : null) || message || window.scratch14Messages[id] || defaultMessage || id;'
                 );
                 return script;
             }
@@ -35,9 +35,7 @@ window.eval = function (script) {
                 // Inject new navbar and comment out the old one
                 script = script.replace(
                     /React\.createElement\(\s+'ul',/,
-                    function (match) {
-                        return $$navigation$$ + ',/*' + match;
-                    }
+                    $$navigation$$ + ', /* $&'
                 );
                 script = script.replace(
                     /React\.createElement\(\s+Modal,/,
@@ -82,9 +80,7 @@ window.eval = function (script) {
                 // Fix project carousel scrolling
                 script = script.replace(
                     /React\.createElement\(Carousel, { /g,
-                    function (match) {
-                        return match + 'settings: { slidesToShow: 3, slidesToScroll: 3 }, ';
-                    }
+                    '$&settings: { slidesToShow: 3, slidesToScroll: 3 }, '
                 );
                 // Fix studio carousel scrolling
                 script = script.replace(
@@ -94,9 +90,27 @@ window.eval = function (script) {
                 // Inject right column
                 script = script.replace(
                     "{ className: 'splash' },",
-                    function (match) {
-                        return match + '\n' + $$right_column$$ + ',\n';
-                    }
+                    '$&\n' + $$right_column$$ + ',\n'
+                );
+                return script;
+            }
+        },
+        explore: {
+            pattern: '//# sourceURL=webpack:///./src/views/explore/explore.jsx?',
+            handler: function (script) {
+                script = script.replace(
+                    "React.createElement(FormattedMessage, { id: 'general.explore' })",
+                    "$&, ' ', " + $$explore_header$$
+                );
+                return script;
+            }
+        },
+        grid: {
+            pattern: '//# sourceURL=webpack:///./src/components/grid/grid.jsx?',
+            handler: function (script) {
+                script = script.replace(
+                    /return React\.createElement\(\s+'div',/,
+                    $$explore_list$$ + ';\n$&'
                 );
                 return script;
             }
